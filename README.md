@@ -19,3 +19,5 @@ If your branch does not branch off from `develop`, you can pass another origin w
 
 * The current working directory is always used so it is preferable to have this script in your PATH
 * Protected branches are `develop` and `master` by default but can be changed by changing the `protected_branches` variable
+
+![](https://github.com/Gira-X/git-squash.py/raw/master/screencast/1.gif)
