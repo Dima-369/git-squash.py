@@ -1,4 +1,4 @@
-# git-squash
+# git-squash.py
 
 Squashes all commits of the current branch into one which contains a summary of all squashed commits with their subject and body, formatted for readability.
 
