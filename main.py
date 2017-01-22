@@ -312,7 +312,7 @@ def main(execute, branch):
         except KeyError:
             print("Set the environment variable $EDITOR to edit "
                   "commit messages! Aborting...")
-            # sys.exit(1)
+            sys.exit(1)
 
     def get_repo():
         try:
