@@ -4,6 +4,12 @@ Squashes all commits of the current branch into one which contains a summary of 
 
 ## Usage
 
+Clone the repository and install the dependencies:
+
+```bash
+$ pip3 install click gitpython
+```
+
 You can pass numbers as arguments, which then get executed after which the script terminates, like: "python main.py 123".
 Those numbers correspond to the different commands you see when running the script without any arguments.
 
