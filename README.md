@@ -24,13 +24,13 @@ If your branch does not branch off from `develop`, you can pass another origin w
 
 ## Options on running the script
 
-```shell
+```json
 0:  alias for 123458 (default behavior)
-1:  Pull 'master' and switch back to current branch 'aa'
-2:  Rebase branch 'master' onto current branch 'aa'
-3:  Squash current branch 'aa' into a single commit
-4:  Merge current branch 'aa' into 'master' with --no-ff
-5:  Delete local and remote branch 'aa' and switch to 'master'
+1:  Pull 'master' and switch back to current branch 'test'
+2:  Rebase branch 'master' onto current branch 'test'
+3:  Squash current branch 'test' into a single commit
+4:  Merge current branch 'test' into 'master' with --no-ff
+5:  Delete local and remote branch 'test' and switch to 'master'
 ------------
 6:  Count commits to squash
 7:  Check if merge will lead to conflicts
