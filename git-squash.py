@@ -339,6 +339,12 @@ def main(execute, branch):
             print("Current branch \"{branch}\" is protected! "
                   "Aborting...".format(branch=active_branch))
             sys.exit(1)
+        if active_branch == branch:
+            print("Trying to merge and squash onto same branch \"{branch}\"!\n"
+                  "Is your --branch argument correct? --branch specifies the "
+                  "branch on which your current branch should be merged on.\n"
+                  "Aborting...".format(branch=active_branch))
+            sys.exit(1)
         if not can_squash():
             print('There is only one commit to be squashed on '
                   'branch \'{branch}\'. Squashing is disabled!'
