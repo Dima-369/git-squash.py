@@ -77,10 +77,14 @@ def get_commits_to_squash(r):
     return commits
 
 
-def call_os(*args, print_output=True):
+def call_os(*args):
     o = check_output(*args).decode('utf-8')
-    if print_output:
-        print(o)
+    return o
+
+
+def call_os_print_output(*args):
+    o = check_output(*args).decode('utf-8')
+    print(o)
     return o
 
 
@@ -339,9 +343,9 @@ def main(execute, branch):
             print('There is only one commit to be squashed on '
                   'branch \'{branch}\'. Squashing is disabled!'
                   .format(branch=active_branch))
-        call_os(['git', 'checkout', branch], print_output=False)
-        status = call_os(['git', 'status'], print_output=False)
-        call_os(['git', 'checkout', active_branch], print_output=False)
+        call_os_print_output(['git', 'checkout', branch])
+        status = call_os_print_output(['git', 'status'])
+        call_os_print_output(['git', 'checkout', active_branch])
         if 'Your branch is ahead of ' in status:
             print('The branch you want to merge in: {branch} is '
                   'ahead of origin. Push first!'.format(branch=branch))
