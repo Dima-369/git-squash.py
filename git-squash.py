@@ -361,8 +361,8 @@ def main(execute, branch):
     check_editor_environ()
     r = get_repo()
     validate_repo()
-    if execute:
-        process_input(r, execute, dividers=False)
+    if execute is not None:
+        process_input(r, str(execute), dividers=False)
     else:
         input_loop(r)
 
